@@ -17,17 +17,30 @@
 
 /** Root **/
 :root {
-  --clr-neutral-100: hsl(0, 0%, 100%);
-  --clr-neutral-200: hsl(210, 4%, 85%);
-  --clr-neutral-300: hsl(210, 4%, 67%);
-  --clr-neutral-400: hsl(232, 10%, 55%);
-  --clr-neutral-800: hsl(213, 9%, 39%);
-  --clr-neutral-900: hsl(212, 27%, 19%);
+  --clr-neutral-100: hsl(0, 0%, 95%);
 
+  --clr-orange-100: hsl(41, 100%, 93%);
+  --clr-orange-200: hsl(40, 100%, 80%);
   --clr-orange-400: hsl(31, 77%, 52%);
 
-  --clr-cyan-800: hsl(184, 100%, 22%);
+  --clr-teal-100: hsl(180, 100%, 97%);
+  --clr-teal-200: hsl(183, 65%, 74%);
+  --clr-teal-800: hsl(185, 98%, 23%);
+
+  --clr-cyan-100: hsl(175, 69%, 94%);
+  --clr-cyan-200: hsl(180, 29%, 69%);
   --clr-cyan-900: hsl(179, 100%, 13%);
+
+  --clr-grey-100: hsl(0, 0%, 100%);
+  --clr-grey-200: hsl(0, 0%, 80%);
+  --clr-grey-300: hsl(0, 0%, 70%);
+  --clr-grey-400: hsl(0, 0%, 60%);
+  --clr-grey-500: hsl(0, 0%, 50%);
+  --clr-grey-600: hsl(0, 0%, 40%);
+  --clr-grey-700: hsl(0, 0%, 30%);
+  --clr-grey-800: hsl(0, 0%, 20%);
+  --clr-grey-900: hsl(0, 0%, 10%);
+  --clr-grey-1000: hsl(0, 0%, 0%);
 
   --ff-primary: "Lexend Deca", Verdana, sans-serif;
   --ff-secondary: "Big Shoulders Display", Arial, sans-serif;
@@ -74,8 +87,26 @@ body {
   font-size: var(--fs-base);
   font-family: var(--ff-body);
   font-weight: var(--fw-regular);
+  display: grid;
+  grid-template-rows: auto max-content max-content;
 }
 
+.swatches {
+  padding: var(--size-400);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1em;
+}
+
+.swatches > * {
+  width: 3em;
+  height: 3em;
+}
+
+.flow * + * {
+  margin-top: var(--flow-spacer, 1em);
+}
 /** Content - End **/
 
 /** Utility **/
@@ -92,67 +123,135 @@ body {
 }
 
 /** Utility - Colours **/
-.text-red-400 {
-  color: var(--clr-red-400);
-}
-.text-yellow-400 {
-  color: var(--clr-yellow-400);
-}
-.text-teal-900 {
-  color: var(--clr-teal-900);
-}
-.text-blue-200 {
-  color: var(--clr-blue-200);
-}
-.text-blue-900 {
-  color: var(--clr-blue-900);
-}
 .text-neutral-100 {
   color: var(--clr-neutral-100);
 }
-.text-neutral-300 {
-  color: var(--clr-neutral-300);
+
+.text-orange-100 {
+  color: var(--clr-orange-100);
 }
-.text-neutral-400 {
-  color: var(--clr-neutral-400);
+.text-orange-200 {
+  color: var(--clr-orange-200);
 }
-.text-neutral-800 {
-  color: var(--clr-neutral-800);
+.text-orange-400 {
+  color: var(--clr-orange-400);
 }
-.text-neutral-900 {
-  color: var(--clr-neutral-900);
+
+.text-teal-100 {
+  color: var(--clr-teal-100);
+}
+.text-teal-200 {
+  color: var(--clr-teal-200);
+}
+.text-teal-800 {
+  color: var(--clr-teal-800);
+}
+
+.text-cyan-100 {
+  color: var(--clr-cyan-100);
+}
+.text-cyan-200 {
+  color: var(--clr-cyan-200);
+}
+.text-cyan-900 {
+  color: var(--clr-cyan-900);
+}
+
+.text-grey-100 {
+  color: var(--clr-grey-100);
+}
+.text-grey-200 {
+  color: var(--clr-grey-200);
+}
+.text-grey-300 {
+  color: var(--clr-grey-300);
+}
+.text-grey-400 {
+  color: var(--clr-grey-400);
+}
+.text-grey-500 {
+  color: var(--clr-grey-500);
+}
+.text-grey-600 {
+  color: var(--clr-grey-600);
+}
+.text-grey-700 {
+  color: var(--clr-grey-700);
+}
+.text-grey-800 {
+  color: var(--clr-grey-800);
+}
+.text-grey-900 {
+  color: var(--clr-grey-900);
+}
+.text-grey-1000 {
+  color: var(--clr-grey-1000);
 }
 
 /** Utility - Background Colours **/
-.bg-red-400 {
-  background-color: var(--clr-red-400);
-}
-.bg-yellow-400 {
-  background-color: var(--clr-yellow-400);
-}
-.bg-teal-900 {
-  background-color: var(--clr-teal-900);
-}
-.bg-blue-200 {
-  background-color: var(--clr-blue-200);
-}
-.bg-blue-900 {
-  background-color: var(--clr-blue-900);
-}
 .bg-neutral-100 {
   background-color: var(--clr-neutral-100);
 }
-.bg-neutral-300 {
-  background-color: var(--clr-neutral-300);
+
+.bg-orange-100 {
+  background-color: var(--clr-orange-100);
 }
-.bg-neutral-400 {
-  background-color: var(--clr-neutral-400);
+.bg-orange-200 {
+  background-color: var(--clr-orange-200);
 }
-.bg-neutral-800 {
-  background-color: var(--clr-neutral-800);
+.bg-orange-400 {
+  background-color: var(--clr-orange-400);
 }
-.bg-neutral-900 {
-  background-color: var(--clr-neutral-900);
+
+.bg-teal-100 {
+  background-color: var(--clr-teal-100);
+}
+.bg-teal-200 {
+  background-color: var(--clr-teal-200);
+}
+.bg-teal-800 {
+  background-color: var(--clr-teal-800);
+}
+
+.bg-cyan-100 {
+  background-color: var(--clr-cyan-100);
+}
+.bg-cyan-200 {
+  background-color: var(--clr-cyan-200);
+}
+.bg-cyan-900 {
+  background-color: var(--clr-cyan-900);
+}
+
+.bg-grey-100 {
+  background-color: var(--clr-grey-100);
+}
+.bg-grey-200 {
+  background-color: var(--clr-grey-200);
+}
+.bg-grey-300 {
+  background-color: var(--clr-grey-300);
+}
+.bg-grey-400 {
+  background-color: var(--clr-grey-400);
+}
+.bg-grey-500 {
+  background-color: var(--clr-grey-500);
+}
+.bg-grey-600 {
+  background-color: var(--clr-grey-600);
+}
+.bg-grey-700 {
+  background-color: var(--clr-grey-700);
+}
+.bg-grey-800 {
+  background-color: var(--clr-grey-800);
+}
+.bg-grey-900 {
+  background-color: var(--clr-grey-900);
+}
+.bg-grey-1000 {
+  background-color: var(--clr-grey-1000);
 }
 
 /** Utility - Font Families **/
