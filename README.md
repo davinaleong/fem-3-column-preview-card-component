@@ -4,7 +4,7 @@ Another simple challenge from Frontend Mentor.
 
 The challenge can be found [here](https://www.frontendmentor.io/challenges/3column-preview-card-component-pH92eAR2-).
 
-Demo page coming soon!
+Demo page can be found [here](https://davinaleong.github.io/fem-3-column-preview-card-component/)!
 
 ## Getting Started
 
